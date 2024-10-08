@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -65,7 +65,6 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid">
         <div class="row border-top px-xl-5">
@@ -77,7 +76,7 @@
                 <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
                     <div class="navbar-nav w-100">
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-toggle="dropdown">Computer Science<i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Computer Science<i class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                                 <a href="" class="dropdown-item">Web Development</a>
                                 <a href="" class="dropdown-item">Data Structures</a>
@@ -143,35 +142,30 @@
                 <div class="col-lg-5">
                     <div class="card border-0">
                         <div class="card-header bg-light text-center p-4">
-                            <h1 class="m-0">Sign Up Now</h1>
+                            <h1 class="m-0">Sign Up</h1>
                         </div>
-                        <div class="card-body rounded-bottom bg-primary p-5">
-                            <form id="registrationForm" action="register.php" method="POST" enctype="multipart/form-data">
+                        <div class="card-body rounded-bottom bg-primary p-4">
+                            <form id="registrationForm" action="/register.php" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control border-0 p-4" placeholder="Your name" required="required" />
+                                    <input type="text" name="name" class="form-control border-0 p-4" placeholder="Full Name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control border-0 p-4" placeholder="Your email" required="required" />
+                                    <input type="email" name="email" class="form-control border-0 p-4" placeholder="Email" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <select name="role" class="custom-select border-0 px-4" style="height: 47px;" id="roleSelect" required>
-                                        <option value="" disabled selected>Select your role</option>
+                                    <select name="role" class="form-control border-0 p-4" required="required">
+                                        <option value="" disabled selected>Select Role</option>
                                         <option value="student">Student</option>
-                                        <option value="expert">Expert</option>
+                                        <option value="teacher">Teacher</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" class="form-control border-0 p-4" placeholder="Your password" required="required" />
+                                    <input type="password" name="password" class="form-control border-0 p-4" placeholder="Password" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="file" name="resume" class="form-control border-0 p-4" placeholder="Upload your resume" required="required" />
+                                    <input type="file" name="resume" class="form-control border-0 p-4" required="required" />
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-dark btn-block border-0 py-3" id="submitBtn">Sign Up</button>
-                                </div>
-                                <div class="form-group">
-                                    <p class="text-white mb-0">Already have an account? <a href="login.html" class="text-primary">Login here</a></p>
-                                </div>
+                                <button type="submit" class="btn btn-dark btn-block border-0 py-3" style="letter-spacing: 4px;">REGISTER</button>
                             </form>
                         </div>
                     </div>
@@ -181,89 +175,83 @@
     </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-primary mb-4">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Palghar, India</p>
-                <p><i class="fa fa-envelope mr-2"></i>techshiksha@gmail.com</p>
-                <p><i class="fa fa-phone mr-2"></i>+91 9324695050</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+    <div class="container-fluid bg-dark text-light mt-5 pt-5">
+        <div class="container text-center">
+            <div class="row pt-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h5 class="text-primary text-uppercase mb-4">Get In Touch</h5>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt mr-3"></i>Palghar, India</p>
+                    <p class="mb-2"><i class="fa fa-envelope mr-3"></i>techshiksha@gmail.com</p>
+                    <p class="mb-0"><i class="fa fa-phone mr-3"></i>+91 9324695050</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-primary mb-4">Quick Links</h5>
-                <a class="text-white" href="">Home</a>
-                <a class="text-white" href="">About</a>
-                <a class="text-white" href="">Courses</a>
-                <a class="text-white" href="">Internship</a>
-                <a class="text-white" href="">Blog</a>
-                <a class="text-white" href="">Contact</a>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-primary mb-4">Newsletter</h5>
-                <p>Subscribe to our newsletter for the latest updates.</p>
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" placeholder="Your email" />
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h5 class="text-primary text-uppercase mb-4">Quick Links</h5>
+                    <div class="d-flex flex-column">
+                        <a class="text-light mb-2" href="about.html">About Us</a>
+                        <a class="text-light mb-2" href="course.html">Courses</a>
+                        <a class="text-light mb-2" href="internship.html">Internship</a>
+                        <a class="text-light mb-2" href="teacher.html">Experts</a>
+                        <a class="text-light mb-2" href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-primary text-uppercase mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Your Email">
                         <div class="input-group-append">
                             <button class="btn btn-primary">Sign Up</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-primary mb-4">Opening Hours</h5>
-                <h6 class="text-white">Monday - Friday</h6>
-                <p>09:00 AM - 05:00 PM</p>
-                <h6 class="text-white">Saturday - Sunday</h6>
-                <p>Closed</p>
+            <div class="row border-top pt-4">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    &copy; <a class="text-light" href="#">TECHSHIKSHA</a>. All Rights Reserved. 
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-light px-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-light px-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="text-light px-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="text-light px-2" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-dark btn-lg back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <a href="#" class="btn btn-primary btn-lg back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
 
-            var role = document.getElementById('roleSelect').value;
-            var formData = new FormData(this);
+            // Get the selected role
+            var role = document.querySelector('select[name="role"]').value;
 
-            // Send form data to server via fetch
-            fetch('register.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Redirect based on role
-                if (role === 'student') {
-                    window.location.href = 'student_home.html'; // Change to your student homepage
-                } else if (role === 'expert') {
-                    window.location.href = 'expert_home.html'; // Change to your expert homepage
-                }
-            })
-            .catch(error => console.error('Error:', error));
+            // Redirect based on the selected role
+            if (role === 'student') {
+                window.location.href = 'student_dashboard.html'; // Change to your student dashboard URL
+            } else if (role === 'teacher') {
+                window.location.href = 'teacher_dashboard.html'; // Change to your teacher dashboard URL
+            } else {
+                // If role is not selected or invalid, you can handle it accordingly
+                alert('Please select a valid role.');
+            }
         });
     </script>
-
 </body>
 
 </html>

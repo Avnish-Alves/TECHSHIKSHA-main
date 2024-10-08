@@ -146,25 +146,23 @@
                         </div>
                         <div class="card-body rounded-bottom bg-primary p-4">
                             <form action="register.php" method="POST" enctype="multipart/form-data">
-                                <label for="name">Name:</label>
-                                <input type="text" name="name" required><br>
+                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" name="name" required><br>
+            
+                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" name="email" required><br>
                         
-                                <label for="email">Email:</label>
-                                <input type="email" name="email" required><br>
-                        
-                                <label for="role">Role:</label>
-                                <select name="role" required>
+                                
+                                <select name="role" class="custom-select border-0 px-4" id="userType" style="height: 47px;" required>
                                     <option value="student">Student</option>
                                     <option value="teacher">Teacher</option>
                                 </select><br>
                         
-                                <label for="password">Password:</label>
-                                <input type="password" name="password" required><br>
+                                
+                                <input type="password" class="form-control border-0 p-4" placeholder="Password" name="password" required><br>
                         
-                                <label for="resume">Resume (for teachers only):</label>
-                                <input type="file" name="resume"><br>
+                                
+                                <input type="file" class="form-control border-0 p-4" placeholder="Resuume for Teachers" name="resume"><br>
                         
-                                <button type="submit">Register</button>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Register</button>
                             </form>>
                             
                         </div>

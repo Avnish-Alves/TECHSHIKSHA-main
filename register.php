@@ -31,6 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid role selected.");
     }
 
+    // Check if the email already exists
+    $emailCheck = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $emailCheck->bind_param("s", $email);
+    $emailCheck->execute();
+    $result = $emailCheck->get_result();
+
+    if ($result->num_rows > 0) {
+        die("Email already exists. Please use a different email.");
+    }
+
     // Handle file upload if the user uploads a resume (for teachers only)
     $resume = '';
     if ($role == 2 && isset($_FILES['resume']['name']) && $_FILES['resume']['name'] != '') {
